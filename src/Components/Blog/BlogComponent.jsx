@@ -7,11 +7,52 @@ import { Link } from "react-router-dom";
 const BlogComponent = () => {
   const [readMore, setReadMore] = useState(false);
   return (
-    <div className="bolg-container">
-      <h2>de-compras Blogs</h2>
+    <div className="blog-container">
+      {/*-------- Blog Headline -----------*/}
+      <div className="blog-headline">
+        <h2>Shopping means de-compras</h2>
+        <p>
+          Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec
+          vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.
+        </p>
+        <button>Read More</button>
+      </div>
 
-      {/* Blog Conttainer */}
+      {/*--------- Top Products div -----------*/}
+
+      <div className="top-products">
+        <div>
+          <h3>The best T-Shirt's is out now!</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+            ipsum suspendisse ultrices gravida....
+          </p>
+          <button>Read More</button>
+        </div>
+        <div>
+          <h3>Top 5 best jackets in november</h3>
+          <p>
+            Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+            labore suspendisse ultrices gravida....
+          </p>
+          <button>Read More</button>
+        </div>
+        <div>
+          <h3> Get this Shirt at a promo price </h3>
+          <p>
+            Sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+            ultrices gravida ncididunt ut labore ....
+          </p>
+          <button>Read More</button>
+        </div>
+      </div>
+
+      {/*------------ Blog Post Conttainer ----------------*/}
       <div className="bolg-posts">
+        <h3 className="blog-posts-heading">Tranding</h3>
         <div className="posts">
           {Blogs.length &&
             Blogs.map((post) => (
@@ -69,7 +110,28 @@ const BlogComponent = () => {
           </div>
         </aside>
       </div>
-      
+
+      {/*----------------  Description Div  -----------------------------*/}
+
+      <div className="description-container">
+        <div className="description-image-div">
+          <img src="https://cdn.pixabay.com/photo/2019/03/01/02/48/store-4027251_640.jpg" alt="" />
+        </div>
+        <div className="description-div">
+          <h3>The Cloths you've been waiting for is out now</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+            ipsum suspendisse ultrices gravida. Ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliquamet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Vestibulum posuere porttitor justo id pellentesque. Proin id lacus
+            feugiat, posuere erat sit amet, commodo ipsum. Donec pellentesque
+            vestibulum metus... <button>Read More</button>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
